@@ -6,6 +6,7 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
 <body>
     <header class="header">
@@ -28,13 +29,14 @@
 
         <i class="fa-solid fa-bars" id="menu-icon"></i>
 
-        <button class="visit-btn">Visit Github</button>
+        <!-- <button class="visit-btn">Visit Github</button> -->
+        <a href="https://github.com/meteorqz6" target="_blank" class="visit-btn">Visit Github</a>
         
     </header>
 
     <section id="about" class="about">
         <div class="about-container">
-            <img src="profile.jpg" alt="">
+            <img src="profile.jpg" alt="" class="profile-img">
 
             <div class="info-box">
 
@@ -50,14 +52,214 @@
                 </div>
 
                 <div class="socials">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://github.com/meteorqz6" target="_blank" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yooseong-nam-88003a31a" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://y9s2n6.tistory.com/" target="_blank" aria-label="Tistory Blog">
+                        <img src="tistory-dark.svg" alt="Tistory" class="social-icon-svg">
+                    </a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <script src=""script.js"></script>
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Contributions</span>
+                    <h3>Node.js</h3>
+                    <ul class="contributions-list">
+
+                        <li class="contribution-category">
+                            <strong>성능 테스트 개선</strong>
+                            <ul class="pr-list">
+                                <li>
+                                    <a href="https://github.com/nodejs/node/pull/59836" target="_blank">
+                                        PR #59836
+                                    </a>
+                                    <p>안정적인 성능 테스트가 가능하도록 설정 최적화</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="contribution-category">
+                            <strong>타입 개선</strong>
+                            <ul class="pr-list">
+                                <li>
+                                    <a href="https://github.com/nodejs/node/pull/59351" target="_blank">
+                                    PR #59351
+                                    </a>
+                                    <p>내부 바인딩 타입 정의 추가</p>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="contribution-category">
+                            <strong>문서 개선</strong>
+                            <ul class="pr-list">
+                                <li>
+                                    <a href="https://github.com/nodejs/node/pull/59224" target="_blank">
+                                        PR #59224
+                                    </a>
+                                    <p>Dynamic import() 설명을 명확하게 수정</p>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/nodejs/node/pull/59427" target="_blank">
+                                        PR #59427
+                                    </a>
+                                    <p>errors.md 파일의 누락된 링크 추가</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Awards</span>
+                    <h3>주관처: 세종대학교</h3>
+                    <ul class="awards-list">
+                        <li>- 제 12회 SW/AI 해커톤 장려상 <span>2025.06.26</span></li>
+                        <li>- 제 1회 연합 학술제(본선) 우수상 <span>2024.06.24</span></li>
+                        <li>- 제 17회 창의설계 경진대회 대상 <span>2024.06.14</span></li>
+                        <li>- 제 8회 SW코딩경시대회 장려상 <span>2021.11.11</span></li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Activities</span>
+                    <h2 class="club-name">
+                        OSSCA
+                        <a href="https://www.contribution.ac/19836dcb-0b5f-80bb-bf91-c22dfc5de0b4" target="_blank">
+                            오픈소스 컨트리뷰션 아카데미
+                        </a>
+                    </h2>
+                    <h4 class="club-time">2025.07 ~ ing</h4>
+                    <h4 class="club-role">⸰ Node.js 팀 리드 멘티</h4>
+                    <ul class="club-experience-list">
+                        <li>- 팀 내 소통 활성화</li>
+                        <li>- 문제 해결 주도 및 스터디 진행</li>
+                        <!-- <li>- Git/GitHub 사용법 지도</li> -->
+                    </ul>
+
+                    <h2 class="club-name">
+                        ALOM
+                        <a href="https://github.com/TEAM-ALOM/alom-react-2025-weatherapp/pull/1" target="_blank">
+                            세종대학교 개발 동아리
+                        </a>
+                    </h2>
+                    <h4 class="club-time">2025.03 ~ 2025.06</h4>
+                    <h4 class="club-role">⸰ React 팀 멘토</h4>
+                    <ul class="club-experience-list">
+                        <li>- React 팀 멘티 학습 지원</li>
+                        <li>- 코드 리뷰 및 스터디 운영</li>
+                        <li>- Git/GitHub 사용법 지도</li>
+                    </ul>
+                </div>
+
+                <div class="grid-card">
+                    <i class="fa-solid fa-list"></i>
+                    <span>Education</span>
+                    <h2 class="club-name">세종대학교 컴퓨터공학과</h2>
+                    <h4 class="education-time">2021.03 ~ 2026.02</h4>
+                    <h2 class="club-name">프로그래머스 데브코스</h2>
+                    <h4 class="club-time">2024.08 ~ 2025.02</h4>
+                    <ul class="club-experience-list">
+                        <li>- 웹풀스택 과정 수료 (React, Node.js)</li>
+                        <li>- 타입스크립트 심화 학습 및 실전 적용</li>
+                        <li>- 기획, 개발, 배포까지 전체 과정 수행</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="example.png" alt="">
+                <h3>Project X</h3>
+                <p>abcdefg</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="example.png" alt="">
+                <h3>Project Y</h3>
+                <p>abcdefg</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="example.png" alt="">
+                <h3>Project Z</h3>
+                <p>abcdefg</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="input">
+                <input type="text" placeholder="example@email.com">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="btn">Submit</div>
+
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© All Rights Reserved | Yooseong Nam</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

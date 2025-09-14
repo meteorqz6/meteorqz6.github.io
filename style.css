@@ -1,14 +1,14 @@
-@font-face {
+/* @font-face {
     font-family: 'NanumSquareNeo';
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
-}
+} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Pretendard', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -39,6 +39,7 @@
     transition: 0.3s ease-in-out;
 }
 .logo:hover {
+    color:#c1e8ef;
     transform: scale(1.05);
 }
 .nav-links {
@@ -80,7 +81,7 @@ li a:hover::before {
     background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
     transform: scale(1.03);
 }
-menu-icon {
+#menu-icon {
     font-size: 2rem;
     display: none;
 }
@@ -103,8 +104,8 @@ section {
     gap: 10rem;
 }
 
-.about img {
-    width: 20vw;
+.profile-img {
+    width: 25vw;
     border-radius: 25%;
 }
 .info-box {
@@ -158,4 +159,408 @@ section {
 }
 .socials i:hover {
     transform: scale(1.05);
+}
+
+.social-icon-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.social-icon-svg:hover {
+    transform: scale(1.05);
+}
+
+
+.socials a {
+    color: inherit; /* 부모 요소의 글자 색상을 그대로 물려받기 */
+    text-decoration: none; /* 밑줄 없애서 링크 깔끔하게 보이도록 */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.experience-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-card {
+    border: 2px solid black;
+    border-radius: 3rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* .grid-card:hover .club-name span {
+    color: white;
+} */
+
+.grid-card:hover {
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+
+.grid-card i {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-card span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.grid-card h3 {
+    margin-bottom: 0.8rem;
+}
+
+/*contribution*/
+.contribution-category {
+    margin-bottom: 1rem;
+}
+
+.contribution-category > strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.pr-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.pr-list li {
+    margin-bottom: 0.5rem;
+}
+
+.pr-list li a {
+    color: #2da4e0;
+    font-weight: 600;
+    position: static; /* 기존 li a 스타일 무력화 */
+    font-size: 0.9rem;
+}
+
+.pr-list li a::before {
+    display: none; /* hover 밑줄 효과 제거 */
+}
+
+.pr-list a:hover {
+    border-bottom: 1px solid #c1e8ef;
+}
+
+.pr-list li p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+}
+
+.awards-list {
+    margin-top: 2rem;
+}
+
+.awards-list li {
+    position: relative;
+    padding-left: 0.8rem; 
+    margin-bottom: 1.2rem;
+}
+
+/* .awards-list li::before {
+    content: "\f005"; 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFD700; 
+} */
+
+.awards-list span {
+    font-size: 0.8rem;
+    color: #515151;
+    margin-left: 4px;
+}
+
+.club-experience-list {
+    margin-top: 0.5rem;
+}
+
+.club-experience-list li {
+    position: relative;
+    padding-left: 0.8rem; 
+    margin-bottom: 0.7rem;
+}
+
+.club-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.club-name a {
+    color: #2da4e0;
+    font-size: 0.9rem;
+}
+
+.club-name a:hover {
+    border-bottom: 1px solid #c1e8ef;
+}
+
+.club-role {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.club-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.education-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(219, 219, 219);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #009dff, #ff00ff);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-10px)scale(1.02);
+}
+
+.project-card img {
+    width: 20vw;
+    border-radius: 1rem;
+}
+
+.project-card:hover .btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.project-card:hover .btn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.input-box input {
+    border-radius: 3rem;
+    border: 2px solid black;
+    padding: 2rem 8rem;
+    font-size: 3rem;
+}
+
+.input-box input::placeholder {
+    font-size: 3rem;
+}
+
+.input {
+    position: relative;
+}
+
+.input i {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 10px;
+    transform: translate(50%, -50%);
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+footer ul li a {
+    color: black;
+    font-weight: 600;
+}
+
+.copyright {
+    font-size: 300;
+    margin-top: 2rem;
+}
+
+@media(max-width:1280px) {
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-container {
+        gap: 3rem;
+    }
+    .experience-info {
+        flex-direction: column;
+    }
+    .input-box input {
+        padding: 2rem 5rem;
+        font-size: 2.5rem;
+    }
+    .input input::placeholder {
+        font-size: 2.5rem;
+    }
+    .input-box i {
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:768px) {
+    header {
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+    header .logo {
+        font-size: 1rem;
+    }
+    header .visit-btn {
+        display: none;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+    .input-box input {
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    .input-box input::placeholder {
+        font-size: 1.5rem;
+    }
+    .input-box i {
+        display: none;
+    }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width:600px) {
+    header #menu-icon {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
+    }
+    .nav-links li {
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav-links.active {
+        display: block;
+    }
+    header {
+        padding: 1rem 5rem;
+        gap: 8rem;
+    }
+    header .logo {
+        font-size: 1.5rem;
+    }
+    .profile-img {
+        width: 40vw;
+    }
+    /* .social-icon-svg {
+        width: 20px;
+    } */
+    .input-box input {
+        padding: 0.5rem 3rem;
+        width: 80%;
+        font-size: 1.5rem;
+    }
+    .input-box input::placeholder {
+        font-size: 1.3rem;
+    }
+    footer ul {
+        gap: 1rem;
+    }
 }
