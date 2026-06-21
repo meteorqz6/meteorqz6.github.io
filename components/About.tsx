@@ -2,22 +2,22 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 const skills = [
-  { label: "Languages", items: ["JavaScript", "TypeScript", "Python"] },
+  { label: "Languages", items: ["HTML", "CSS", "JavaScript", "TypeScript"] },
   {
     label: "Frontend",
-    items: [
-      "React",
-      "Next.js",
-      "React Native",
-      "Tailwind CSS",
-      "Zustand",
-      "TanStack Query",
-    ],
+    items: ["React", "Nextjs", "Tailwind CSS"],
   },
-  { label: "Backend", items: ["Node.js", "Express.js"] },
+  {
+    label: "State & Form",
+    items: ["TanStack Query", "Zustand", "React Hook Form", "Zod"],
+  },
+  {
+    label: "Backend",
+    items: ["Node.js", "Express.js", "PostgreSQL", "Prisma", "REST API"],
+  },
   {
     label: "Tools",
-    items: ["Git", "GitHub", "GitHub Actions", "Storybook", "Vercel", "Figma"],
+    items: ["Git", "GitHub", "Vercel", "Storybook", "Figma"],
   },
 ];
 
@@ -34,6 +34,7 @@ export default function About() {
             alt="Yooseong Nam"
             width={300}
             height={300}
+            priority
             className="rounded-[12%] w-[40vw] sm:w-64 lg:w-72 flex-shrink-0 object-cover"
           />
 
@@ -97,7 +98,7 @@ export default function About() {
             <div className="flex flex-col gap-2.5 w-full">
               {skills.map((cat) => (
                 <div key={cat.label} className="flex items-start gap-3">
-                  <span className="text-xs text-gray-400 w-16 pt-1 flex-shrink-0 text-right sm:text-right">
+                  <span className="text-xs text-gray-400 w-24 pt-1 flex-shrink-0 text-right sm:text-right">
                     {cat.label}
                   </span>
                   <div className="flex flex-wrap gap-1.5">

@@ -20,10 +20,26 @@ type Entry = {
 
 const timeline: Entry[] = [
   {
+    org: "서울시 민간기업 참여형 매력일자리",
+    fullName: "AI 바이브코딩 기반 프론트엔드 실무과정",
+    period: "2026.05 - 진행 중",
+    role: "",
+    items: [
+      {
+        label: "React 미션 기반 페어 스터디 및 PR 코드 리뷰 진행",
+        href: "https://github.com/pair-study",
+      },
+      { label: "최종 프로젝트 진행 중" },
+    ],
+    current: true,
+    type: "education",
+    icon: "fa-solid fa-laptop-code",
+  },
+  {
     org: "세종대학교",
     fullName: "컴퓨터공학과",
     period: "2021.03 - 2026.02",
-    role: "졸업",
+    role: "",
     items: [],
     current: false,
     type: "education",
@@ -64,10 +80,10 @@ const timeline: Entry[] = [
     current: false,
   },
   {
-    org: "프로그래머스",
-    fullName: "타입스크립트로 함께하는 웹 풀 사이클 개발",
+    org: "프로그래머스 데브코스",
+    fullName: "타입스크립트로 함께하는 웹 풀 사이클 개발 과정 수료",
     period: "2024.08 - 2025.02",
-    role: "데브코스 수료",
+    role: "",
     items: [],
     current: false,
     type: "education",
@@ -104,20 +120,17 @@ export default function Experience() {
                   <div>
                     <h3 className="text-xl font-bold">
                       {item.org}
-                      {item.current && (
-                        <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-gradient-to-r from-[#009dff] to-[#ff00ff] text-white font-normal">
-                          진행 중
-                        </span>
-                      )}
                     </h3>
                     {item.href ? (
                       <a
                         href={item.href}
                         target="_blank"
-                        className="text-[#2da4e0] text-sm hover:underline"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[#1f8fd1] text-sm font-medium hover:text-[#006ba8]"
                         style={{ position: "static" }}
                       >
                         {item.fullName}
+                        <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" />
                       </a>
                     ) : (
                       <span className="text-sm text-gray-500">{item.fullName}</span>
@@ -128,9 +141,11 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <p className="text-sm font-semibold mb-3 text-gray-700">
-                  ⸰ {item.role}
-                </p>
+                {item.role && (
+                  <p className="text-sm font-semibold mb-3 text-gray-700">
+                    ⸰ {item.role}
+                  </p>
+                )}
 
                 {item.desc && (
                   <p className="text-sm text-gray-500 mb-3 leading-relaxed">{item.desc}</p>
@@ -140,17 +155,29 @@ export default function Experience() {
                   <ul className="flex flex-col gap-1.5">
                     {item.items.map((i) => (
                       <li key={i.label} className="text-sm text-gray-600 pl-3 flex items-center gap-2">
-                        <span>— {i.label}</span>
-                        {i.href && (
+                        {i.href ? (
                           <a
                             href={i.href}
                             target="_blank"
-                            className="flex items-center gap-1 text-xs text-red-500 hover:underline group-hover:text-red-400"
+                            rel="noreferrer"
+                            className={`inline-flex items-center gap-1 hover:text-[#006ba8] ${
+                              i.href.includes("youtube.com")
+                                ? "text-red-500 hover:text-red-400"
+                                : "text-[#1f8fd1]"
+                            }`}
                             style={{ position: "static" }}
                           >
-                            <i className="fa-brands fa-youtube" />
-                            YouTube
+                            <span>— {i.label}</span>
+                            <i
+                              className={`${
+                                i.href.includes("youtube.com")
+                                  ? "fa-brands fa-youtube"
+                                  : "fa-solid fa-arrow-up-right-from-square"
+                              } text-[10px]`}
+                            />
                           </a>
+                        ) : (
+                          <span>— {i.label}</span>
                         )}
                       </li>
                     ))}

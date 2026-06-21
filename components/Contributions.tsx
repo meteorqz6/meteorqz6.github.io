@@ -150,10 +150,12 @@ function AccordionItem({
             href={item.href}
             target="_blank"
             onClick={(e) => e.stopPropagation()}
-            className="text-[#2da4e0] font-semibold text-sm hover:underline whitespace-nowrap"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-[#2da4e0] font-semibold text-sm hover:text-[#006ba8] whitespace-nowrap"
             style={{ position: "static" }}
           >
             {item.pr}
+            <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" />
           </a>
           <span className="font-medium text-sm">{item.title}</span>
         </div>
@@ -250,10 +252,12 @@ export default function Contributions() {
                 <a
                   href={pr.href}
                   target="_blank"
-                  className="text-[#2da4e0] font-semibold text-sm hover:underline whitespace-nowrap"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[#2da4e0] font-semibold text-sm hover:text-[#006ba8] whitespace-nowrap"
                   style={{ position: "static" }}
                 >
                   {pr.pr}
+                  <i className="fa-solid fa-arrow-up-right-from-square text-[10px]" />
                 </a>
                 <span className="font-medium text-sm">{pr.title}</span>
               </div>

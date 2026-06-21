@@ -34,12 +34,19 @@ const projects: Project[] = [
     desc: "Moyeorak 서비스 기반 Storybook 컴포넌트 라이브러리",
     period: "2026.04 - 진행 중",
     role: "프론트엔드 개발 · 디자이너 1, FE 1",
-    tech: ["Storybook", "React", "TypeScript", "Chromatic"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Panda CSS",
+      "Radix UI",
+      "Storybook",
+      "Chromatic",
+    ],
     points: [
       "디자이너와 협업하여 Moyeorak 컴포넌트를 독립 라이브러리로 구축",
       "Chromatic으로 컴포넌트 문서화 및 시각적 회귀 테스트 운영",
     ],
-    image: "/example.png",
+    image: "/moyeorak-design-system.png",
     demo: "https://main--69cf7bceba8267c1b5d86ba6.chromatic.com/",
   },
 ];
