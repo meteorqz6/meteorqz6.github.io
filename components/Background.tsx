@@ -17,13 +17,21 @@ const awards: { org: string; items: AwardItem[] }[] = [
   {
     org: "정보통신산업진흥원",
     items: [
-      { title: "2025년 오픈소스 컨트리뷰션아카데미 최우수상", date: "2025.12.05", desc: "Node.js 팀 리드 멘티로 활동하며 7건의 PR을 기여했습니다. 팀 운영을 주도해 프로젝트 성과를 이끌었습니다." },
+      {
+        title: "2025년 오픈소스 컨트리뷰션 아카데미 최우수상",
+        date: "2025.12.05",
+        desc: "Node.js 팀 리드 멘티로 활동하며 7건의 PR을 기여했습니다. 팀 운영을 주도해 프로젝트 성과를 이끌었습니다.",
+      },
     ],
   },
   {
     org: "세종대학교",
     items: [
-      { title: "제 12회 SW·AI 해커톤 장려상", date: "2025.06.26", desc: "교내 트랙제 활성화를 위한 AI 맞춤형 학업 설계 서비스 '마이트랙'을 개발했습니다." },
+      {
+        title: "제 12회 SW·AI 해커톤 장려상",
+        date: "2025.06.26",
+        desc: "교내 트랙제 활성화를 위한 AI 맞춤형 학업 설계 서비스 '마이트랙'을 개발했습니다.",
+      },
       {
         desc: "취약 음소 분석과 시각적 피드백 기반 한국어 발음 학습 서비스 '발밤발밤'을 개발했습니다.",
         subItems: [
@@ -79,16 +87,25 @@ export default function Background() {
             <div className="flex flex-col gap-5">
               {awards.map((group) => (
                 <div key={group.org}>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">{group.org}</p>
+                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                    {group.org}
+                  </p>
                   <ul className="flex flex-col gap-3">
                     {group.items.map((a, i) =>
                       "subItems" in a ? (
                         <li key={i} className="flex flex-col gap-1.5">
                           <div className="pl-3 border-l-2 border-gray-300 flex flex-col gap-1.5">
                             {a.subItems.map((sub) => (
-                              <div key={sub.title} className="flex items-baseline justify-between gap-2">
-                                <span className="text-sm font-semibold">{sub.title}</span>
-                                <span className="text-xs text-gray-400 whitespace-nowrap">{sub.date}</span>
+                              <div
+                                key={sub.title}
+                                className="flex items-baseline justify-between gap-2"
+                              >
+                                <span className="text-sm font-semibold">
+                                  {sub.title}
+                                </span>
+                                <span className="text-xs text-gray-400 whitespace-nowrap">
+                                  {sub.date}
+                                </span>
                               </div>
                             ))}
                           </div>
@@ -97,12 +114,20 @@ export default function Background() {
                       ) : (
                         <li key={a.title} className="flex flex-col gap-0.5">
                           <div className="flex items-baseline justify-between gap-2 pl-3 border-l-2 border-gray-300">
-                            <span className="text-sm font-semibold">{a.title}</span>
-                            <span className="text-xs text-gray-400 whitespace-nowrap">{a.date}</span>
+                            <span className="text-sm font-semibold">
+                              {a.title}
+                            </span>
+                            <span className="text-xs text-gray-400 whitespace-nowrap">
+                              {a.date}
+                            </span>
                           </div>
-                          {a.desc && <p className="text-xs text-gray-600 mt-0.5 pl-3">{a.desc}</p>}
+                          {a.desc && (
+                            <p className="text-xs text-gray-600 mt-0.5 pl-3">
+                              {a.desc}
+                            </p>
+                          )}
                         </li>
-                      )
+                      ),
                     )}
                   </ul>
                 </div>
@@ -113,9 +138,16 @@ export default function Background() {
           <Card icon="fa-solid fa-certificate" label="Certificates">
             <ul className="flex flex-col gap-3">
               {certificates.map((c) => (
-                <li key={c.name} className="flex items-baseline justify-between gap-2 pl-3 border-l-2 border-gray-300">
+                <li
+                  key={c.name}
+                  className="flex items-baseline justify-between gap-2 pl-3 border-l-2 border-gray-300"
+                >
                   <span className="text-sm font-semibold">{c.name}</span>
-                  {c.date && <span className="text-xs text-gray-400 whitespace-nowrap">{c.date}</span>}
+                  {c.date && (
+                    <span className="text-xs text-gray-400 whitespace-nowrap">
+                      {c.date}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
@@ -128,9 +160,16 @@ export default function Background() {
             </div>
             <ul className="flex flex-col gap-3">
               {languages.map((l) => (
-                <li key={l.name} className="flex items-baseline justify-between gap-2 pl-3 border-l-2 border-gray-300">
+                <li
+                  key={l.name}
+                  className="flex items-baseline justify-between gap-2 pl-3 border-l-2 border-gray-300"
+                >
                   <span className="text-sm font-semibold">{l.name}</span>
-                  {l.date && <span className="text-xs text-gray-400 whitespace-nowrap">{l.date}</span>}
+                  {l.date && (
+                    <span className="text-xs text-gray-400 whitespace-nowrap">
+                      {l.date}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>
