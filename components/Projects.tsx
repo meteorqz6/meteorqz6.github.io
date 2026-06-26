@@ -36,6 +36,7 @@ const projects: Project[] = [
     ],
     image: "/moyeorak.png",
     demo: "https://moyeorak.site/",
+    repo: "https://github.com/dnd-side-project/dnd-14th-8-frontend",
   },
   {
     title: "모여락 디자인 시스템",
@@ -57,6 +58,7 @@ const projects: Project[] = [
     ],
     image: "/moyeorak-design-system.png",
     demo: "https://main--69cf7bceba8267c1b5d86ba6.chromatic.com/",
+    repo: "https://github.com/meteorqz6/moyeorakui",
   },
   {
     title: "한귤(Hangyul)",
@@ -78,6 +80,7 @@ const projects: Project[] = [
     ],
     image: "/hangyul.png",
     demo: "https://www.talkhangyul.com/ko/",
+    repo: "https://github.com/hangyul-edu/hangyul-web",
   },
 ];
 
@@ -143,6 +146,17 @@ export default function Projects() {
                 </ul>
 
                 <div className="flex gap-3 mt-auto pt-2">
+                  {p.repo && (
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm px-5 py-2 rounded-full border-2 border-black font-medium transition-all duration-200 hover:bg-black hover:text-white"
+                    >
+                      <i className="fa-brands fa-github text-sm" />
+                      Github
+                    </a>
+                  )}
                   {p.demo && (
                     <a
                       href={p.demo}
@@ -152,17 +166,6 @@ export default function Projects() {
                     >
                       <i className="fa-solid fa-arrow-up-right-from-square text-xs" />
                       Live Demo
-                    </a>
-                  )}
-                  {p.repo && (
-                    <a
-                      href={p.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm px-5 py-2 rounded-full border-2 border-black font-medium transition-all duration-200 hover:bg-black hover:text-white"
-                    >
-                      <i className="fa-brands fa-github text-sm" />
-                      Github Repo
                     </a>
                   )}
                 </div>
